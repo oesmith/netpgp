@@ -1,0 +1,12 @@
+# $NetBSD: atlocal.in,v 1.5 2009/06/11 02:28:50 lukem Exp $
+
+TOPSRCDIR=/Users/oliver/Projects/Personal/PGP/libnetpgp
+export TOPSRCDIR
+
+PATH=/Users/oliver/Projects/Personal/PGP/libnetpgp/src/netpgp:/Users/oliver/Projects/Personal/PGP/libnetpgp/src/netpgpverify:$PATH
+export PATH
+
+testhomedir=/Users/oliver/Projects/Personal/PGP/libnetpgp/tests/homedir
+testpublickey=/Users/oliver/Projects/Personal/PGP/libnetpgp/tests/key-public.asc
+testprivatekey=/Users/oliver/Projects/Personal/PGP/libnetpgp/tests/key-private.asc
+testuserid=C7AB5F325F918728
