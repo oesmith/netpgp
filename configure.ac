@@ -15,6 +15,17 @@ AC_CONFIG_HEADER([src/lib/config.h])
 AM_INIT_AUTOMAKE([-Wall -Werror foreign])
 AM_MAINTAINER_MODE
 
+# Enable/disable programs
+#
+AC_ARG_ENABLE([programs],
+     [  --enable-programs    Turn on programs (netpgp, netpgpverify, netpgpkeys)],
+     [case "${enableval}" in
+       yes) programs=true ;;
+       no)  programs=false ;;
+       *) AC_MSG_ERROR([bad value ${enableval} for --enable-programs]) ;;
+     esac],[programs=true])
+AM_CONDITIONAL([BUILD_PROGRAMS], [test x$programs = xtrue])
+
 AC_CANONICAL_HOST
 CANONICAL_HOST=$host
 AC_SUBST([CANONICAL_HOST])
